@@ -1,0 +1,28 @@
+.photos-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.tile {
+    box-sizing: border-box;
+    max-width: 20%;
+    max-height: 150px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin: 0 0 0.2rem 0;
+}
+
+.tile-add {
+    font-size: 4rem;
+    padding-top: 0.5em;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.tile-image {
+
+}
