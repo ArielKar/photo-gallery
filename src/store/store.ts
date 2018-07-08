@@ -4,6 +4,7 @@ import {Action, AnyAction, createStore, Dispatch, Unsubscribe} from "redux";
 
 // const readFileAsync = promisify(fs.readFile);
 
+// TODO: change from localStorage to indexedDB or JSON
 const images = localStorage.images ? JSON.parse(localStorage.images) : [];
 
 interface IState {
