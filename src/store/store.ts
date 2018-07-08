@@ -1,13 +1,7 @@
 import {Action, AnyAction, createStore, Dispatch, Unsubscribe} from "redux";
 import {addImageToDB, initDB} from "../db/db";
-// import * as fs from 'fs';
-// import {promisify} from 'util';
 
-// const readFileAsync = promisify(fs.readFile);
 initDB();
-
-// TODO: change from localStorage to indexedDB or JSON
-// const images = localStorage.images ? JSON.parse(localStorage.images) : [];
 
 interface IState {
     images: String[]
@@ -27,7 +21,6 @@ const reducer = (state: IState, action: AnyAction): IState => {
     switch (action.type) {
         case "ADD_IMAGE":
             const images = state.images.concat([action.dataURL]);
-            // localStorage.images = JSON.stringify(images);
             // TODO: export to thunk
             addImageToDB(action.dataURL);
             return {
