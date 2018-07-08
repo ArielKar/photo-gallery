@@ -31,7 +31,6 @@ class Photos extends React.Component<IPhotosProps,{}> {
     };
 
     buildTiles = () => {
-        console.log(this.props.images);
         if (!this.props.images) return null;
         return this.props.images.map((imageURL, idx) => {
             return <Photo src={imageURL} key={idx}/>

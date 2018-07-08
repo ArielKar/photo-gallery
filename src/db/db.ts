@@ -8,7 +8,6 @@ export function initDB() {
     };
 
     request.onsuccess = (e: any) => {
-        console.log(e.target.result);
         db = e.target.result;
         getImages();
     };
@@ -59,9 +58,7 @@ export function getImages() {
 
     const images = trans.objectStore('images');
     const req = images.getAll();
-    console.log(images);
     req.onsuccess = () => {
-        console.log("images retrieved");
         const imagesFromDB =  req.result;
         store.dispatch({type:"SET_IMAGES", imagesFromDB});
     };
