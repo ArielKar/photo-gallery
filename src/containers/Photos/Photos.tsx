@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import './Photos.css';
+
 import AddPhoto from "../../components/AddPhoto/AddPhoto";
 import Photo from "../../components/Photo/Photo";
 
