@@ -3,7 +3,9 @@ import * as React from 'react';
 
 const AddPhoto = (props: any) => {
     return (
-        <div className="tile tile-add" onClick={props.addPhoto}>+</div>
+        <div className="tile" onClick={props.addPhoto}>
+            <div className="tile-add">+</div>
+        </div>
     )
 };
 

@@ -33,7 +33,6 @@ export function addImageToDB(imageURL) {
 
     const images = trans.objectStore('images');
     const req = images.add(imageURL);
-    console.log(images);
     req.onsuccess = () => {
         console.log("image added");
     };
